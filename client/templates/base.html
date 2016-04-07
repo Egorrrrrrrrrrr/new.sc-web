@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:0;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    {% block extrameta %}{% end %}
+    <title>{% block title %}OSTIS{% end %}</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="/static/common/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/common/bootstrap/css/bootstrap-multilevel.css" />
+    <link rel="stylesheet" type="text/css" href="/static/components/css/common.css" />
+    {% block extrastyles %}{% end %}
+
+    {% include 'common.html' %}
+    {% block extrapluginscripts %}{% end %}
+
+    {% include 'components.html' %}
+    {% block extrascripts %}{% end %}
+
+    {% block head %}{% end %}
+</head>
+
+{% block body %}
+<body id="body" class="hold-transition skin-green sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+                    <!-- Logo -->
+        <a href="index2.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>S</b>T</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Set</b>Theory</span>
+        </a>
+        
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+        
+            <div id="menu_container">
+            <!-- there will be placed menu items -->
+            </div>
+
+                   
+                <div class="btn-group" style="padding-top: 9px;">
+                    <button style="background-color: rgba(217, 83, 79, 0); border: 0;" id="arguments_clear_button" class="btn btn-danger" sc_control_sys_idtf="ui_control_argument_button_clear"><span class="glyphicon glyphicon-remove-sign"></span></button>
+                    <button id="arguments_add_button" class="btn btn-success" {#sc_control_sys_idtf="ui_control_argument_button_add"#}style="background-color: rgba(217, 83, 79, 0); border: 0;"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                </div>
+                
+                <div id="arguments_buttons" class="btn-group argument-buttons">
+                    <!-- Buttons will be inserted on arguments append -->
+                </div>
+
+      
+
+
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li>
+
+                <div id="search-panel">
+                  <form action="#" method="get" class="sidebar-form" role="search">
+                    <div class="input-group" style="position: absolute; right: 90px; width:200px; top: 8px;">
+                      <input id="search-input" type="text" class="typeahead form-control" x-webkit-speech sc_control_sys_idtf="ui_control_search_idtf_edit" style="width: 250px;" placeholder="Search..." data-provide="typeahead" autocomplete="off">
+                      <span class="input-group-btn">
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+
+
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+    </header>
+
+        <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+         
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+
+
+
+    
+
+
+            <li class="treeview nav1"></li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Раздел. Предметная область теории множеств</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Раздел. Множества</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Раздел. Бинарные отношения, заданные на множествах</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Раздел. Операции на множествах</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Раздел. Доказательства теории множеств</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+            <li class="header">HISTORY</li>
+            
+
+
+    
+          </ul>
+          <ul class="sidebar-menu" id="history-items">
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            SetTheory
+            <small>Version 2.0</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"> Home</a></li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box">
+                  <div id="window-container">
+                    {# Windows will be added later #}
+                  </div>
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+
+ <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 2.0.0
+        </div>
+        <strong>Copyright &copy; 2014-2015 <a href="#">OSTIS</a>
+      </footer>
+
+            <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark" style="position: fixed; height: 660px; background: rgba(34, 45, 50, 0.88);">
+        <!-- Create the tabs-->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs" >
+            <div id="language-panel" class="pull-right">
+            <form class="navbar-form navbar-right" sc_control_sys_idtf="ui_control_select_idtf_mode">
+                <select id="language-select" class="form-control" style="margin-right: 10px;width: 150px;">
+                </select>
+            </form>
+        </div>
+          <div id="auth-user-panel" class="pull-right">
+
+            {% if user %}
+            <div id="auth-user-registered">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <div class="auth-user-image pull-left" ><img src="{{ user.avatar }}" alt="{{ escape(user.name) }}"></img></div>
+                            <div class="pull-left"><span id="auth-user-name" >{{ escape(user.name) }}</span></div>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {# <li class="divider"></li> #}
+                            <li><a href="/auth/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% else %}
+            <a href="/auth/google">
+                <div class="gplus-login-button"></div>
+            </a>
+            {% end %}
+        </div>
+
+
+                    <div class="btn-group" style="left: 40px;">
+                <button type="button" class="btn btn-success ">
+                    <span class="glyphicon glyphicon-font"></span>
+                </button>
+                <button type="button" class="histoy-item-btn btn btn-success " data-toggle="dropdown" sc_control_sys_idtf="ui_control_select_window_type">
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                </button>
+                <ul id="history-item-langs" class="dropdown-menu" role="menu">{# languages will be added #}</ul>
+                
+                <button type="button" class="btn btn-primary" id="windows-list">
+                    <span class="glyphicon glyphicon-th-large"></span>
+                </button>
+                <button type="button" class="btn btn-default" id="history-item-print" sc_control_sys_idtf="ui_control_print_window_content">
+                    <span class="glyphicon glyphicon-print"></span>
+                </button>
+            </div>
+         
+        </ul>
+      </aside><!-- /.control-sidebar -->
+</div>
+
+
+
+
+
+    <!-- Modal -->
+    <div id="help-modal" class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div id="help-modal-body" class="modal-content modal-empty">
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            SCWeb.ui.Locker.show();
+            var params = {
+                        menu_container_id: 'menu_container',
+                        {% if first_time == "1" %}first_time: true,{% end %}
+                    };
+            $.when(SCWeb.core.Main.init(params)).done(function() {
+                SCWeb.ui.Locker.hide();
+            });
+        });
+
+        
+    </script>
+
+
+<div id="sc-ui-locker">
+    <div id="sc-ui-locker-text">Loading...</div>
+    <div id="sc-ui-locker-icon"></div>   
+</div>
+
+
+</body>
+{% end %}
+
+</html>
